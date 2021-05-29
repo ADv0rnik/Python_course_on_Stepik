@@ -11,3 +11,24 @@
 
 """
 
+
+def update_dictionary(d, key, value):
+    if key in d:
+        d[key].append(value)
+    elif key not in d:
+        k = key * 2
+        if k in d:
+            d[k].append(value)
+        elif k not in d:
+            d[k] = []
+            d[k].append(value)
+    return
+
+
+d = {}
+print(update_dictionary(d, 1, -1))
+print(d)
+update_dictionary(d, 2, -2)
+print(d)
+update_dictionary(d, 1, -3)
+print(d)
