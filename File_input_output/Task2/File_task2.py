@@ -19,7 +19,7 @@ i = 0
 inf = open('in1.txt', 'r')
 lst = inf.read().replace('\n', '').lower().split()
 inf.close()
-sort_lst = sorted(lst)
+'''sort_lst = sorted(lst)
 print(sort_lst)
-
+'''
 print(lst)
