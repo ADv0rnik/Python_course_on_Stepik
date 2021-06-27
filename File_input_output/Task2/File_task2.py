@@ -14,10 +14,12 @@ Sample Output:
 abc 3
 """
 
+word = ''
+i = 0
 inf = open('in1.txt', 'r')
-l = []
-for line in inf:
-    line = line.rstrip()
-    l = l + [line]
+lst = inf.read().replace('\n', '').lower().split()
+inf.close()
+sort_lst = sorted(lst)
+print(sort_lst)
 
-print(l)
+print(lst)
