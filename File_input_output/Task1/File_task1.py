@@ -35,3 +35,6 @@ while i < len(s):
     a = s[i]
     i += 1
 
+with open('out.txt','w') as outf:
+    outf.write(final_string)
+
