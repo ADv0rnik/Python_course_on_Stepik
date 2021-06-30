@@ -18,18 +18,17 @@ d = {}
 inf = open('in1.txt', 'r')
 lst = inf.read().lower().split()
 inf.close()
-print(lst)
 for word in lst:
     if word not in d:
         d[word] = 1
     elif word in d:
         d[word] += 1
-print(d)
-popular = max(d, key = d.get)
 maximum = 0
 for key, value in d.items():
     k = d.get(key)
     if k > maximum:
         maximum = k
-print(popular + ' ' + str(maximum))
+with open('out1.txt', 'w') as outf:
+    most_popular = max(d, key = d.get) + ' ' + str(maximum)
+    outf.write(most_popular)
 
