@@ -14,17 +14,22 @@ Sample Output:
 abc 3
 """
 
-word = ''
-i = 0
+d = {}
 inf = open('in1.txt', 'r')
 lst = inf.read().lower().split()
 inf.close()
 print(lst)
-
-sort_lst = sorted(lst)
-print(sort_lst)
-
 for word in lst:
-    if (lst.count(word) >= i):
-        i = lst.count(word)
-print(i)
+    if word not in d:
+        d[word] = 1
+    elif word in d:
+        d[word] += 1
+print(d)
+popular = max(d, key = d.get)
+maximum = 0
+for key, value in d.items():
+    k = d.get(key)
+    if k > maximum:
+        maximum = k
+print(popular + ' ' + str(maximum))
+
