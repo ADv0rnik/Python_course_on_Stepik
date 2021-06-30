@@ -17,9 +17,14 @@ abc 3
 word = ''
 i = 0
 inf = open('in1.txt', 'r')
-lst = inf.read().replace('\n', '').lower().split()
+lst = inf.read().lower().split()
 inf.close()
-'''sort_lst = sorted(lst)
-print(sort_lst)
-'''
 print(lst)
+
+sort_lst = sorted(lst)
+print(sort_lst)
+
+for word in lst:
+    if (lst.count(word) >= i):
+        i = lst.count(word)
+print(i)
