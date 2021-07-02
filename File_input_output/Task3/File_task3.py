@@ -21,3 +21,8 @@ Sample Output:
 81.0 84.0 85.666666667
 '''
 
+with open('in3.txt', 'r') as inf:
+    for line in inf:
+        line = line.strip().split(';')
+
+
