@@ -22,7 +22,7 @@ Sample Output:
 '''
 
 with open('in3.txt', 'r') as inf:
-    for line in inf:
-        line = line.strip().split(';')
+    for line in inf.readlines():
+        line = line.split(';')
 
 
