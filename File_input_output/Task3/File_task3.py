@@ -1,4 +1,4 @@
-'''
+"""
 Имеется файл с данными по успеваемости абитуриентов. Он представляет из себя набор строк, где в каждой строке записана
 следующая информация:
 Фамилия;Оценка_по_математике;Оценка_по_физике;Оценка_по_русскому_языку
@@ -19,10 +19,21 @@ Sample Output:
 94.0
 71.666666667
 81.0 84.0 85.666666667
-'''
+"""
+import statistics
 
-with open('in3.txt', 'r') as inf:
+mean_lst = []
+s = 0
+
+with open('in3.txt', 'r', encoding='utf-8') as inf:
     for line in inf.readlines():
         line = line.split(';')
+        line.remove(line[0])
+        for i, n in enumerate(line):
+           line[i] = int(n)
+        mean_lst.append(sum(line)/len(line))
+        # mean_mark = (int(line[1]) + int(line[2])+ int(line[3]))/3
+        # mean_lst.append(mean_mark)
+print(mean_lst)
 
 
