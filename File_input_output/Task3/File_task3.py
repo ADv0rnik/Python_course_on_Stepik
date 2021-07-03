@@ -43,9 +43,8 @@ with open('in3.txt', 'r', encoding='utf-8') as inf:
         # mean_lst.append(mean_mark)
 with open('out3.txt', 'w') as out_file:
     for i in mean_lst:
-        var = round(i, 9)
-        out_file.write(str(var) + '\n')
-
-    final_str = str(statistics.mean(map(float, math_mark))) + ' ' + str(statistics.mean(map(float, phys_mark))) + ' ' \
-                + str(round(statistics.mean(map(float, rus_mark)), 9))
+        out_file.write(str(i) + '\n')
+    final_str = str(statistics.mean(map(float, math_mark))) + ' ' \
+                + str(statistics.mean(map(float, phys_mark))) + ' ' \
+                + str(statistics.mean(map(float, rus_mark)))
     out_file.write(final_str)
