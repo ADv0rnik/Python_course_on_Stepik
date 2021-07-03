@@ -40,8 +40,9 @@ with open('in3.txt', 'r', encoding='utf-8') as inf:
         rus_mark.append(line[2])
         # mean_mark = (int(line[1]) + int(line[2])+ int(line[3]))/3
         # mean_lst.append(mean_mark)
-for i in range(len(mean_lst)):
-    print(mean_lst[i])
+with open('out3.txt', 'w') as outf:
+    for i in range(len(mean_lst)):
+        print(mean_lst[i])
 print(math_mark, phys_mark, rus_mark)
 
 
