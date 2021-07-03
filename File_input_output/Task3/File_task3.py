@@ -23,6 +23,9 @@ Sample Output:
 import statistics
 
 mean_lst = []
+math_mark = []
+phys_mark = []
+rus_mark = []
 s = 0
 
 with open('in3.txt', 'r', encoding='utf-8') as inf:
@@ -32,8 +35,13 @@ with open('in3.txt', 'r', encoding='utf-8') as inf:
         for i, n in enumerate(line):
            line[i] = int(n)
         mean_lst.append(sum(line)/len(line))
+        math_mark.append(line[0])
+        phys_mark.append(line[1])
+        rus_mark.append(line[2])
         # mean_mark = (int(line[1]) + int(line[2])+ int(line[3]))/3
         # mean_lst.append(mean_mark)
-print(mean_lst)
+for i in range(len(mean_lst)):
+    print(mean_lst[i])
+print(math_mark, phys_mark, rus_mark)
 
 
