@@ -39,8 +39,6 @@ with open('in3.txt', 'r', encoding='utf-8') as inf:
         phys_mark.append(line[1])
         rus_mark.append(line[2])
         count += 1
-        # mean_mark = (int(line[1]) + int(line[2])+ int(line[3]))/3
-        # mean_lst.append(mean_mark)
 with open('out3.txt', 'w') as out_file:
     for i in mean_lst:
         out_file.write(str(i) + '\n')
