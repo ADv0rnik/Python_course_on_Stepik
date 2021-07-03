@@ -26,7 +26,7 @@ mean_lst = []
 math_mark = []
 phys_mark = []
 rus_mark = []
-s = 0
+count = 0
 
 with open('in3.txt', 'r', encoding='utf-8') as inf:
     for line in inf.readlines():
@@ -38,6 +38,7 @@ with open('in3.txt', 'r', encoding='utf-8') as inf:
         math_mark.append(line[0])
         phys_mark.append(line[1])
         rus_mark.append(line[2])
+        count += 1
         # mean_mark = (int(line[1]) + int(line[2])+ int(line[3]))/3
         # mean_lst.append(mean_mark)
 with open('out3.txt', 'w') as outf:
