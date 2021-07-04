@@ -13,7 +13,6 @@ import sys
 print(*sys.argv[1:])
 
 """
-line = ' '.join(sys.argv[2:])
+line = ' '.join(sys.argv[1:])
 print(line)
 """
-
