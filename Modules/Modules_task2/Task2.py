@@ -10,6 +10,10 @@ arg1 arg2
 
 import sys
 
+print(*sys.argv[1:])
+
+"""
 line = ' '.join(sys.argv[2:])
 print(line)
+"""
 
