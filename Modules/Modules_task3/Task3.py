@@ -6,3 +6,10 @@
 строк разбейте текст с помощью метода splitlines.
 
 """
+
+import requests
+
+with open('in.txt') as in_file:
+    url = in_file.readline()
+
+print(url)
