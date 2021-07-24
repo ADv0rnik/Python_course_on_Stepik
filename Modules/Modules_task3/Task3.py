@@ -10,6 +10,6 @@
 import requests
 
 with open('in.txt') as in_file:
-    url = in_file.readline()
-
-print(url)
+    url = in_file.readline().strip()
+t = requests.get(url).text.count('\n')
+print(t)
