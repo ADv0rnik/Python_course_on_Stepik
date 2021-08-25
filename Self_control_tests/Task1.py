@@ -32,13 +32,16 @@ losses = 0
 score = 0
 l = [games, wins, draw, losses, score]
 n = 3
-print(l)
+i = 0
 with open('in.txt', encoding='utf-8') as inf:
      for _ in range(n):
          s = inf.readline().strip().split(';')
-         for i in s:
-             if s[i] not in team:
+         if s[i] not in team:
+             team[s[i]] = l
+         elif s[i] in team:
+             team[s[i]][0] += 1
 
 
-         print(s)
+
+     print(team)
 
