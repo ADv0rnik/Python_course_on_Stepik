@@ -3,7 +3,7 @@
 стандартный вывод сводную таблицу результатов всех матчей.
 За победу команде начисляется 3 очка, за поражение — 0, за ничью — 1.
 Формат ввода следующий:
-В первой строке указано целое число nn — количество завершенных игр.
+В первой строке указано целое число n — количество завершенных игр.
 После этого идет nn строк, в которых записаны результаты игры в следующем формате:
 
 Первая_команда;Забито_первой_командой;Вторая_команда;Забито_второй_командой
@@ -25,23 +25,32 @@ Sample Output:
 Локомотив:2 2 0 0 6
 """
 team = {}
-games = 0
+games = 1
 wins = 0
 draw = 0
 losses = 0
 score = 0
 l = [games, wins, draw, losses, score]
-n = 3
+n = int(input())
 i = 0
-with open('in.txt', encoding='utf-8') as inf:
-     for _ in range(n):
-         s = inf.readline().strip().split(';')
-         if s[i] not in team:
-             team[s[i]] = l
-         elif s[i] in team:
-             team[s[i]][0] += 1
+for _ in range(n):
+    s = input().split(';')
+    if s[i] not in team:
+        team[s[i]] = [games, wins, draw, losses, score]
+    elif s[i] in team:
+        team[s[i]][0] += 1
+
+    if s[i+2] not in team:
+        team[s[i+2]] = [games, wins, draw, losses, score]
+    elif s[i+2] in team:
+        team[s[i+2]][0] += 1
+
+for k, v in team.items():
+    print(k + ': '+ str(v))
 
 
 
-     print(team)
+
+
+
 
