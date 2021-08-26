@@ -58,6 +58,7 @@ for _ in range(n):
         team[s[i]][4] += 1
         team[s[i+2]][4] += 1
 
+
 for k, v in team.items():
     print((k + ':'), *v, end ='\n')
 
