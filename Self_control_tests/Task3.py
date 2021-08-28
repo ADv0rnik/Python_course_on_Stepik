@@ -25,3 +25,10 @@ stepic
 champignons
 the
 '''
+
+n = int(input())
+lst = []
+
+for i in range(n):
+    i = input()
+    lst.append(i)
