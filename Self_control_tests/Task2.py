@@ -38,8 +38,21 @@ dcba
 
 n = list(input())
 m = list(input())
+txt = input()
+code = input()
+
 d = dict(zip(n, m))
 
-for k, v in d.items():
-    print((k + ':'),*v, end='\n')
+def transform_text(txt, dic):
+    frm = ''.join([str(i) for i in dic.keys()])
+    to = ''.join([str(i) for i in dic.values()])
+    table =txt.maketrans(frm, to)
+    return txt.translate(table)
 
+def reverse_transform_text(txt1, dic1):
+    frm = ''.join([str(i) for i in dic1.values()])
+    to = ''.join([str(i) for i in dic1.keys()])
+    table =txt1.maketrans(frm, to)
+    return txt1.translate(table)
+print(transform_text(txt,d))
+print(reverse_transform_text(code,d))
