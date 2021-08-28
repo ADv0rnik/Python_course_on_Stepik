@@ -45,22 +45,21 @@ for _ in range(n):
     elif s[i+2] in team:
         team[s[i+2]][0] += 1
 
-    if s[i+1] > s[i+3]:
+    if int(s[i + 1]) < int(s[i + 3]):
+        team[s[i]][3] += 1
+        team[s[i + 2]][1] += 1
+        team[s[i + 2]][4] += 3
+    if int(s[i + 1]) > int(s[i + 3]):
         team[s[i]][1] += 1
         team[s[i]][4] += 3
-        team[s[i+2]][3] += 1
-    if s[i+1] < s[i+3]:
-        team[s[i]][3] += 1
-        team[s[i+2]][1] += 1
-        team[s[i+2]][4] += 3
-    if s[1+1] == s[i+3]:
+        team[s[i + 2]][3] += 1
+    if int(s[i + 1]) == int(s[i + 3]):
         team[s[i]][2] += 1
         team[s[i]][4] += 1
-        team[s[i+2]][4] += 1
-
+        team[s[i + 2]][4] += 1
 
 for k, v in team.items():
-    print((k + ':'), *v, end ='\n')
+    print(k + ':' + str(v[0]) + ' ' + str(v[1]) + ' ' + str(v[2]) + ' ' + str(v[3]) + ' ' + str(v[4]))
 
 
 
