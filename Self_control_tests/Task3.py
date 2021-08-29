@@ -25,21 +25,16 @@ stepic
 champignons
 the
 '''
+import random
 
 n = int(input())
-lst = [input() for i in range(n)]
+lst = [input().lower() for i in range(n)]
 m = int(input())
 lst1 = [input().lower() for k in range(m)]
 errors = []
 
 for q in lst1:
     temp = q.split()
-    for x in temp:
-        if x not in lst and x not in errors:
-            errors.append(x)
-
+    _ = [errors.append(x) for x in temp if x not in lst and x not in errors]
+random.shuffle(errors)
 print('\n'.join(errors))
-
-
-# items = []
-# _ = [items.append(d) for d in data if d not in items]
