@@ -24,3 +24,20 @@ Sample Input:
 Sample Output:
 20 -20
 '''
+
+x = 0
+y = 0
+n = int(input())
+
+for i in range(n):
+    s = input().split()
+    for k in range(len(s)):
+        if s[k] == 'север':
+            y += int(s[k+1])
+        elif s[k] == 'юг':
+            y -= int(s[k + 1])
+        elif s[k] == 'запад':
+            x -= int(s[k + 1])
+        elif s[k] == 'восток':
+            x += int(s[k + 1])
+print(x, y, sep=' ')
