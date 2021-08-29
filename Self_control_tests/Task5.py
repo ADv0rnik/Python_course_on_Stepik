@@ -32,3 +32,9 @@ Sample Output:
 10 -
 11 172.0
 '''
+lst =[]
+
+with open('in.txt', encoding='utf-8') as tbl:
+    for l in tbl:
+        s = l.split('\t')
+print(s)
