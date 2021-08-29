@@ -30,9 +30,15 @@ n = int(input())
 lst = [input() for i in range(n)]
 m = int(input())
 lst1 = [input().lower() for k in range(m)]
+errors = []
 
-print(lst, end='')
-print(lst1, end='')
+for q in lst1:
+    temp = q.split()
+    for x in temp:
+        if x not in lst and x not in errors:
+            errors.append(x)
+
+print('\n'.join(errors))
 
 
 # items = []
