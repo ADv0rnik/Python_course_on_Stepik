@@ -27,8 +27,13 @@ the
 '''
 
 n = int(input())
-lst = []
+lst = [input() for i in range(n)]
+m = int(input())
+lst1 = [input().lower() for k in range(m)]
 
-for i in range(n):
-    i = input()
-    lst.append(i)
+print(lst, end='')
+print(lst1, end='')
+
+
+# items = []
+# _ = [items.append(d) for d in data if d not in items]
