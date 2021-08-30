@@ -33,6 +33,11 @@ Sample Output:
 11 172.0
 '''
 lst =[]
+keys = range(1, 12)
+values = ['-','-','-','-','-','-','-','-','-','-','-','-']
+d = dict(zip(keys,values))
+# for k, v in d.items():
+#     print((k), *v)
 
 with open('in.txt', encoding='utf-8') as tbl:
     for l in tbl:
