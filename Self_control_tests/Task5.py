@@ -51,6 +51,6 @@ for k, v in clas.items():
     values[int(k)-1] = v[0]/v[1]
 
 final = dict(zip(keys, values))
-for k, v in final.items():
-    print(str(k) + ' ', v)
-
+with open('out.txt','w') as out:
+    for k, v in final.items():
+        out.writelines(str(k) + ' '+ str(v) + '\n')
