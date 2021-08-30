@@ -35,11 +35,8 @@ Sample Output:
 
 num = 1
 clas = {}
-#keys = range(1, 12)
+keys = range(1, 12)
 values = ['-','-','-','-','-','-','-','-','-','-','-']
-#d = dict(zip(keys,values))
-# for k, v in d.items():
-#     print((k), *v)
 
 with open('in.txt', encoding='utf-8') as tbl:
     for l in tbl:
@@ -52,4 +49,8 @@ with open('in.txt', encoding='utf-8') as tbl:
 
 for k, v in clas.items():
     values[int(k)-1] = v[0]/v[1]
-#print(values)
+
+final = dict(zip(keys, values))
+for k, v in final.items():
+    print(str(k) + ' ', v)
+
