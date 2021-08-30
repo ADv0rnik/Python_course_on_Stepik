@@ -32,14 +32,24 @@ Sample Output:
 10 -
 11 172.0
 '''
-lst =[]
-keys = range(1, 12)
-values = ['-','-','-','-','-','-','-','-','-','-','-','-']
-d = dict(zip(keys,values))
+
+num = 1
+clas = {}
+#keys = range(1, 12)
+values = ['-','-','-','-','-','-','-','-','-','-','-']
+#d = dict(zip(keys,values))
 # for k, v in d.items():
 #     print((k), *v)
 
 with open('in.txt', encoding='utf-8') as tbl:
     for l in tbl:
-        s = l.split('\t')
-print(s)
+        s = l.strip().split('\t')
+        if s[0] not in clas:
+            clas[s[0]] = [int(s[2]), num]
+        elif s[0] in clas:
+            clas[s[0]][0] += int(s[2])
+            clas[s[0]][1] += 1
+
+for k, v in clas.items():
+    values[int(k)-1] = v[0]/v[1]
+#print(values)
